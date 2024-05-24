@@ -54,21 +54,6 @@ class Application:
         #self.loaded_model_smn.load_weights(self.directory+"model-bw_smn.h5")
         self.loaded_model_smn.load_weights("C:/Users/bhadr/Desktop/Trial/model/model-bw_smn.h5")
         
-        self.ct = {}
-        self.ct['blank'] = 0
-        self.blank_flag = 0
-        for i in ascii_uppercase:
-          self.ct[i] = 0
-        print("Loaded model from disk")
-        self.root = tk.Tk()
-        self.root.title("Sign language to Text Converter")
-        self.root.protocol('WM_DELETE_WINDOW', self.destructor)
-        self.root.geometry("900x1100")
-        self.panel = tk.Label(self.root)
-        self.panel.place(x = 135, y = 10, width = 640, height = 640)
-        self.panel2 = tk.Label(self.root) # initialize image panel
-        self.panel2.place(x = 460, y = 95, width = 310, height = 310)
-        
         self.T = tk.Label(self.root)
         self.T.place(x=31,y = 17)
         self.T.config(text = "Sign Language to Text",font=("courier",40,"bold"))
